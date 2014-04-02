@@ -144,15 +144,12 @@
                 // FIX 2
                 // Update the angle of the particle from the sourcePosition and the radius.  This is only done of the particles are rotating
 				currentParticle->angle += currentParticle->degreesPerSecond * aDelta;
-				currentParticle->radius -= currentParticle->radiusDelta * aDelta;
+				currentParticle->radius += currentParticle->radiusDelta * aDelta;
                 
 				GLKVector2 tmp;
 				tmp.x = sourcePosition.x - cosf(currentParticle->angle) * currentParticle->radius;
 				tmp.y = sourcePosition.y - sinf(currentParticle->angle) * currentParticle->radius;
 				currentParticle->position = tmp;
-
-				if (currentParticle->radius < minRadius)
-					currentParticle->timeToLive = 0;
                 
 			} else {
 				GLKVector2 tmp, radial, tangential;
@@ -381,9 +378,12 @@
     // Calculate the particles life span using the life span and variance passed in
 	particle->timeToLive = MAX(0, particleLifespan + particleLifespanVariance * RANDOM_MINUS_1_TO_1());
 
+    float startRadius = maxRadius + maxRadiusVariance * RANDOM_MINUS_1_TO_1();
+    float endRadius = minRadius + minRadiusVariance * RANDOM_MINUS_1_TO_1();
+
 	// Set the default diameter of the particle from the source position
-	particle->radius = maxRadius + maxRadiusVariance * RANDOM_MINUS_1_TO_1();
-	particle->radiusDelta = maxRadius / particle->timeToLive;
+	particle->radius = startRadius;
+	particle->radiusDelta = (endRadius - startRadius) / particle->timeToLive;
 	particle->angle = GLKMathDegreesToRadians(angle + angleVariance * RANDOM_MINUS_1_TO_1());
 	particle->degreesPerSecond = GLKMathDegreesToRadians(rotatePerSecond + rotatePerSecondVariance * RANDOM_MINUS_1_TO_1());
     
@@ -472,6 +472,7 @@
 	maxRadius                   = [aConfig floatValueFromChildElementNamed:@"maxRadius" parentElement:rootXMLElement];
 	maxRadiusVariance           = [aConfig floatValueFromChildElementNamed:@"maxRadiusVariance" parentElement:rootXMLElement];
 	minRadius                   = [aConfig floatValueFromChildElementNamed:@"minRadius" parentElement:rootXMLElement];
+	minRadiusVariance           = [aConfig floatValueFromChildElementNamed:@"minRadiusVariance" parentElement:rootXMLElement];
 	rotatePerSecond             = [aConfig floatValueFromChildElementNamed:@"rotatePerSecond" parentElement:rootXMLElement];
 	rotatePerSecondVariance     = [aConfig floatValueFromChildElementNamed:@"rotatePerSecondVariance" parentElement:rootXMLElement];
     rotationStart               = [aConfig floatValueFromChildElementNamed:@"rotationStart" parentElement:rootXMLElement];

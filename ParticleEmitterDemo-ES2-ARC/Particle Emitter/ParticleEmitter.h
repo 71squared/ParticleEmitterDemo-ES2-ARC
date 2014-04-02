@@ -116,6 +116,7 @@ typedef struct {
 	GLfloat maxRadiusVariance;				// Variance of the maxRadius
 	GLfloat radiusSpeed;					// The speed at which a particle moves from maxRadius to minRadius
 	GLfloat minRadius;						// Radius from source below which a particle dies
+	GLfloat minRadiusVariance;				// Variance of the minRadius
 	GLfloat rotatePerSecond;				// Numeber of degress to rotate a particle around the source pos per second
 	GLfloat rotatePerSecondVariance;		// Variance in degrees for rotatePerSecond
 
