@@ -80,6 +80,7 @@
     
     // Create a list of emitters configs to load
     NSArray *configs = @[
+                         @"Giros Gratis.pex",
                          @"Winner Stars.pex",
                          @"Comet.pex",
                          @"Foam.pex",

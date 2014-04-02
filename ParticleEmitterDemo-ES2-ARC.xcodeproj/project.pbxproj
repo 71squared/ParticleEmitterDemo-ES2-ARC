@@ -47,6 +47,7 @@
 		826C1B2F18A8DB9400285947 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 826C1B2E18A8DB9400285947 /* libz.dylib */; };
 		826C1B3018A8DCAE00285947 /* particleFragmentShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 826C1B1918A8DAFC00285947 /* particleFragmentShader.fsh */; };
 		826C1B3118A8DCAE00285947 /* particleVertexShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 826C1B1A18A8DAFC00285947 /* particleVertexShader.vsh */; };
+		82FD427018EC6A770070BCF7 /* Giros Gratis.pex in Resources */ = {isa = PBXBuildFile; fileRef = 82FD426F18EC6A770070BCF7 /* Giros Gratis.pex */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		826C1B2418A8DAFC00285947 /* TBXML+HTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+HTTP.h"; sourceTree = "<group>"; };
 		826C1B2518A8DAFC00285947 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
 		826C1B2E18A8DB9400285947 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		82FD426F18EC6A770070BCF7 /* Giros Gratis.pex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Giros Gratis.pex"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		826C1AE618A8DAEF00285947 /* Particle Emitter Config */ = {
 			isa = PBXGroup;
 			children = (
+				82FD426F18EC6A770070BCF7 /* Giros Gratis.pex */,
 				826C1AE718A8DAEF00285947 /* Atomic Bubble.pex */,
 				826C1AE818A8DAEF00285947 /* Blue Flame.pex */,
 				826C1AE918A8DAEF00285947 /* Blue Galaxy.pex */,
@@ -374,6 +377,7 @@
 				826C1B3118A8DCAE00285947 /* particleVertexShader.vsh in Resources */,
 				826C1B0418A8DAEF00285947 /* huo1.pex in Resources */,
 				826C1B0A18A8DAEF00285947 /* Particle Emitters.pdproject in Resources */,
+				82FD427018EC6A770070BCF7 /* Giros Gratis.pex in Resources */,
 				826C1B0F18A8DAEF00285947 /* Touch Up.pex in Resources */,
 				826C1AFF18A8DAEF00285947 /* Blue Galaxy.pex in Resources */,
 				826C1B0718A8DAEF00285947 /* JasonChoi_rising up.pex in Resources */,
