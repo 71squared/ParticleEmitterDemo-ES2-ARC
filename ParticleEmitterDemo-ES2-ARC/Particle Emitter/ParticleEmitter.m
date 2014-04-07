@@ -569,8 +569,8 @@
 		indices[i*6+1] = i*4+1;
 		indices[i*6+2] = i*4+2;
 		
-		indices[i*6+5] = i*4+3;
-		indices[i*6+4] = i*4+2;
+		indices[i*6+5] = i*4+2;
+		indices[i*6+4] = i*4+3;
 		indices[i*6+3] = i*4+1;
 	}
 	
