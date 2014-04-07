@@ -75,6 +75,10 @@
 	
 	// Release the VBOs created
 	glDeleteBuffers(1, &verticesID);
+    
+    // delete the texture
+    GLuint name = texture.name;
+    glDeleteTextures(1, &name);
 }
 
 - (id)initParticleEmitterWithFile:(NSString*)aFileName  effectShader:(GLKBaseEffect*)aShaderEffect {
