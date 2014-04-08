@@ -72,6 +72,9 @@
     
 	if (particles)
 		free(particles);
+    
+    if (indices)
+        free(indices);
 	
 	// Release the VBOs created
 	glDeleteBuffers(1, &verticesID);
